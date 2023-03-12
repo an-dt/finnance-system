@@ -12,6 +12,8 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/base.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/button.css">
+    <script src="js/account.js"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -31,20 +33,20 @@
             </div>
         </form>
         <!-- Navbar-->
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
+        
+        <div class="box1">
+            <div class="dropdown1"> Account
+                <span class="left-icon"></span>
+                <span class="right-icon"></span>
+                <div class="items">
+                    <a href="#" style="--i:1;"><span></span>Setting</a>
+                    <a href="#" style="--i:2;"><span></span>Mannager</a>
+                    <a href="#" style="--i:3;"><span></span>...</a>
+                    <a href="#" style="--i:4;"><span></span>Logout</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/account.js"></script>
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -2007,7 +2009,7 @@
                                         <div class="cover-datedetails" id="adddatedetails">
     
                                             <div data-v-4f67f27e=""
-                                                class="v-picker v-card v-picker--date picker-date theme--light" style="width: 333px;">
+                                                class="v-picker v-card v-picker--date picker-date theme--light" style="width: 333px; z-index: 10000;">
                                                 <div class="v-picker__title"
                                                     style="background-color: rgb(45, 184, 76); border-color: rgb(45, 184, 76);">
                                                     <div class="v-date-picker-title">
@@ -2193,8 +2195,8 @@
                                                 </div>
                                                 <div class="v-picker__actions v-card__actions">
                                                     <div data-v-4f67f27e="" class="spacer"></div> <button data-v-4f67f27e=""
-                                                        type="button" class="v-btn v-btn--flat theme--light primary--text">
-                                                        <div class="v-btn__content" id="cancel">Cancel</div>
+                                                        type="button" class="v-btn v-btn--flat theme--light primary--text"   id="cancel">
+                                                        <div class="v-btn__content" >Cancel</div>
                                                     </button>
                                                 </div>
                                             </div>
@@ -2706,6 +2708,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/canceltran.js"></script>
+    <script src="js/account.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/chart-area-demo.js"></script>
     <script src="assets/demo/chart-bar-demo.js"></script>

@@ -12,6 +12,8 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/base.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/button.css">
+    <script src="js/account.js"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -31,20 +33,19 @@
             </div>
         </form>
         <!-- Navbar-->
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div class="box1">
+            <div class="dropdown1"> Account
+                <span class="left-icon"></span>
+                <span class="right-icon"></span>
+                <div class="items">
+                    <a href="#" style="--i:1;"><span></span>Setting</a>
+                    <a href="#" style="--i:2;"><span></span>Mannager</a>
+                    <a href="#" style="--i:3;"><span></span>...</a>
+                    <a href="#" style="--i:4;"><span></span>Logout</a>
+                </div>
+            </div>
+        </div>
+        <script src="js/account.js"></script>
     </nav>
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
@@ -132,7 +133,435 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
-              
+
+                <div class="container-fluid px-4">
+
+                    <div class="add-transaction">
+                        <button class="add-transaction_button" id="addTransactionBtn">
+                            Add-Plan
+                        </button>
+
+                        <h1 class="mt-4">Dashboard</h1>
+
+                    </div>
+                    <div class="cover-dashboard" id="close">
+
+                        <div class="add-transaction__details" id="addTransactionDetails" >
+                            <div data-v-12e0dba0="" class="transaction-dialog v-card theme--light"  style="height: 50%">
+                                <div data-v-12e0dba0="" class="v-card__title header-title"><span data-v-12e0dba0=""
+                                        class="title--text font-weight-medium">Add Plan</span></div>
+                                <div data-v-12e0dba0="" class="v-card__text transaction-content" style="display: flow-root;">
+                                    <div data-v-12e0dba0="" class="layout wrap" style="
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                ">
+    
+                                        <div data-v-12e0dba0="" class="flex xs4 plan" id="addcategory">
+                                            <div data-v-87fa3a36="" data-v-12e0dba0="" class="flex" haveimage="true"
+                                                title="Category">
+                                                <div data-v-6bc9d4d3="" data-v-87fa3a36="" tabindex="2"
+                                                    class="search-border">
+                                                    <p data-v-6bc9d4d3="" class="text-search">Plan</p>
+                                                    <div data-v-37d24af6="">
+                                                        <div data-v-6bc9d4d3="" class="have-image"><input data-v-6bc9d4d3=""
+                                                            maxlength="140" tabindex="5" type="text" > <!----></div>
+                                                </div>
+                                                </div> <!---->  
+                                            </div>
+                                        </div>
+                                        
+    
+                                        <div data-v-12e0dba0="" class="flex xs4 amountip">
+                                            <div data-v-37d24af6="" data-v-12e0dba0="" tabindex="3" class="item">
+                                                <p data-v-37d24af6="" class="text-search caption">Amount</p>
+                                                <div data-v-37d24af6=""
+                                                    class="v-input input-money-new-layout v-text-field v-text-field--full-width v-text-field--single-line v-text-field--enclosed v-input--hide-details theme--light">
+                                                    <div class="v-input__control">
+                                                        <div class="v-input__slot" style="height: 24px;">
+                                                            <div class="v-text-field__slot"><label aria-hidden="true"
+                                                                    class="v-label theme--light"
+                                                                    style="left: 0px; right: auto; position: absolute;"></label><input
+                                                                    aria-label="0" tabindex="3" name="input-3-4" min="0"
+                                                                    autocomplete="off" maxlength="23" type="text"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-v-12e0dba0="" class="layout wrap" style="
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                ">
+                               
+                                    
+                                        <div data-v-12e0dba0="" class="flex xs4 date" id="adddate">
+                                            <div data-v-68cd2ba7="" data-v-12e0dba0="" class="flex" title="Date">
+                                                <div data-v-6bc9d4d3="" data-v-68cd2ba7="" tabindex="4"
+                                                    class="search-border">
+                                                    <p data-v-6bc9d4d3="" class="text-search">Date</p>
+                                                    <div data-v-6bc9d4d3="" class="have-image"><span data-v-6bc9d4d3=""
+                                                            class="placehoder">03/03/2023</span> <i data-v-6bc9d4d3=""></i>
+                                                    </div>
+                                                </div> <!---->
+                                            </div>
+                                        </div>
+                                        <div class="cover-datedetails" id="adddatedetails">
+    
+                                            <div data-v-4f67f27e=""
+                                                class="v-picker v-card v-picker--date picker-date theme--light" style="width: 333px; z-index: 10000;">
+                                                <div class="v-picker__title"
+                                                    style="background-color: rgb(45, 184, 76); border-color: rgb(45, 184, 76);">
+                                                    <div class="v-date-picker-title">
+                                                        <div class="v-picker__title__btn v-date-picker-title__year">2023</div>
+                                                        <div
+                                                            class="v-picker__title__btn v-date-picker-title__date v-picker__title__btn--active">
+                                                            <div>Mon, Mar 6</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="v-picker__body theme--light" style="width: 290px;display: contents;">
+                                                    <div>
+                                                        <div class="v-date-picker-header theme--light"><button type="button"
+                                                                class="v-btn v-btn--icon theme--light">
+                                                                <div class="v-btn__content">
+                                                                        <i aria-hidden="true" class="fa-solid fa-chevron-left"></i>
+                                                                </div>
+                                                            </button>
+                                                            <div class="v-date-picker-header__value"><strong
+                                                                    style="color: rgb(45, 184, 76); caret-color: rgb(45, 184, 76);">March
+                                                                    2023</strong></div><button type="button"
+                                                                class="v-btn v-btn--icon theme--light">
+                                                                <div class="v-btn__content"> <i aria-hidden="true" class="fa-solid fa-chevron-right"></i>
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="v-date-picker-table v-date-picker-table--date theme--light">
+                                                            <table>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>S</th>
+                                                                        <th>M</th>
+                                                                        <th>T</th>
+                                                                        <th>W</th>
+                                                                        <th>T</th>
+                                                                        <th>F</th>
+                                                                        <th>S</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">1</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">2</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">3</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">4</div>
+                                                                            </button></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">5</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--active v-btn--icon v-btn--floating theme--light"
+                                                                                style="background-color: rgb(45, 184, 76); border-color: rgb(45, 184, 76);">
+                                                                                <div class="v-btn__content">6</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">7</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">8</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">9</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">10</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">11</div>
+                                                                            </button></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">12</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">13</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">14</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">15</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">16</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">17</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">18</div>
+                                                                            </button></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">19</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">20</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">21</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">22</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">23</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">24</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">25</div>
+                                                                            </button></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">26</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">27</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">28</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">29</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">30</div>
+                                                                            </button></td>
+                                                                        <td><button type="button"
+                                                                                class="v-btn v-btn--flat v-btn--floating theme--light">
+                                                                                <div class="v-btn__content">31</div>
+                                                                            </button></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="v-picker__actions v-card__actions">
+                                                    <div data-v-4f67f27e="" class="spacer"></div> <button data-v-4f67f27e=""
+                                                        type="button" class="v-btn v-btn--flat theme--light primary--text"   id="cancel">
+                                                        <div class="v-btn__content" >Cancel</div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-v-12e0dba0="" class="flex xs8 note">
+                                            <div data-v-d391f88a="" data-v-12e0dba0="" class="flex">
+                                                <div data-v-6bc9d4d3="" data-v-d391f88a="" tabindex="5"
+                                                    class="search-border not-pointer">
+                                                    <p data-v-6bc9d4d3="" class="text-search">Note</p>
+                                                    <div data-v-6bc9d4d3="" class="have-image"><input data-v-6bc9d4d3=""
+                                                            maxlength="140" tabindex="5" type="text" name="lname"
+                                                            placeholder="Note" id="note"> <!----></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div data-v-12e0dba0="" class="flex xs8">
+                                        <div data-v-12e0dba0="" class="layout wrap" >
+                                        </div>
+    
+                                    </div>
+                                    <div data-v-12e0dba0="" class="layout wrap">
+    
+    
+                                    </div>
+                                </div>
+                               
+                               
+                                    <div data-v-12e0dba0="" class="v-card__actions transaction-action " style="    
+                                    padding-left: 83px;
+                                    display: flex;
+                                    justify-content: space-evenly;" >
+                                    <div class="closedashboard" id="cancel1">
+                                        <button 
+                                            data-v-bb5f2faa="" data-v-12e0dba0="" type="button"
+                                            class="action-btn v-btn theme--light has-background cancel bora4" tabindex="12" id="closeBtn">
+                                            <div class="v-btn__content"><span data-v-bb5f2faa="" class="body-2">Cancel</span>
+                                            </div> 
+                                        </button> 
+                                    </div>
+                                    <button data-v-2303cbc6="" data-v-12e0dba0="" disabled="disabled"
+                                        type="button"
+                                        class="action-btn done v-btn v-btn--disabled theme--light has-background done bora4"
+                                        tabindex="13">
+                                        <div class="v-btn__content"><span data-v-2303cbc6="" class="body-2">Save</span>
+                                        </div>
+                                    </button>
+                                        <div data-v-12e0dba0="" tabindex="14"></div>
+                                    </div>
+                                
+    
+    
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        Area Chart Example
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        Bar Chart Example
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            DataTable Example
+                        </div>
+                        <div class="card-body">
+                            <table id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Plan</th>
+                                        <th>Notice</th>
+
+                                        <th>EndDate</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Plan</th>
+                                        <th>Notice</th>
+
+                                        <th>EndDate</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Food & Beverage</td>
+                                        <td>Edinburgh</td>
+
+                                        <td>2011/04/25</td>
+                                        <td>-$320,800</td>
+                                    </tr>   
+                                    
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                
+                </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
@@ -151,6 +580,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/account.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/chart-area-demo.js"></script>
     <script src="assets/demo/chart-bar-demo.js"></script>
